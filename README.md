@@ -17,7 +17,7 @@ allprojects {
 
 ```gradle
 dependencies {
-    compile 'com.github.conanchen.hiask-api-sexyimage:grpc-public-javalite:master-SNAPSHOT'
+    compile 'com.github.conanchen.easyhan:grpc-public-javalite:master-SNAPSHOT'
 }
 ```
 	
@@ -25,7 +25,7 @@ dependencies {
 
 ```gradle
 dependencies {
-    compile 'com.github.conanchen.hiask-api-sexyimage:grpc-manage-javalite:master-SNAPSHOT'
+    compile 'com.github.conanchen.easyhan:grpc-manage-javalite:master-SNAPSHOT'
 }
 ```
 	
@@ -33,7 +33,7 @@ dependencies {
     
 ```gradle
 dependencies {
-    compile 'com.github.conanchen.hiask-api-sexyimage:grpc-manage-java:master-SNAPSHOT'
+    compile 'com.github.conanchen.easyhan:grpc-manage-java:master-SNAPSHOT'
 }
 ```
 	
