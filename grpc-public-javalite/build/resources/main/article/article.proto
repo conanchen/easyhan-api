@@ -1,0 +1,69 @@
+// Copyright 2015, gRPC Authors
+// All rights reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+syntax = "proto3";
+package article;
+
+option java_multiple_files = true;
+option java_package = "org.easyhan.article.grpc";
+option java_outer_classname = "ArticleProto";
+option objc_class_prefix = "ART";
+
+import "common/common.proto";
+
+// The article service definition.
+service Article {
+
+    // A server-to-client streaming RPC.
+    //
+    // Obtains hanzis whose types are the given normal/poster/sexy/porn.  Results are
+    // streamed rather than returned at once (e.g. in a response message with a
+    // repeated field), as the lastUpsertd maybe an very old time and contain a
+    // huge number of hanzis.
+    rpc List (ListRequest) returns (stream ListResponse) {
+    }
+
+    rpc Get (GetRequest) returns (GetResponse) {
+    }
+
+    rpc Visit (VisitRequest) returns (VisitResponse) {
+    }
+}
+
+message ListRequest {
+    int64 lastUpdated = 1;
+}
+
+message ListResponse {
+    string articleId = 1;
+    common.HanziLevel level = 2;
+    int64 lastUpdated = 3;
+}
+
+message GetRequest {
+    string articleId = 1;
+}
+
+message GetResponse {
+    string content = 1;
+    common.Error error = 2;
+}
+
+message VisitRequest {
+    string articleId = 1;
+}
+
+message VisitResponse {
+    common.Error error = 1;
+}

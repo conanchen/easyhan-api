@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":grpc-manage-java" external.linked.project.path="$MODULE_DIR$/../../../grpc-manage-java" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="com.github.conanchen.hiask-api-sexyimage" external.system.module.version="0.1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../grpc-manage-java">
+      <excludeFolder url="file://$MODULE_DIR$/../../../grpc-manage-java/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../grpc-manage-java/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../grpc-manage-java/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

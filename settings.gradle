@@ -1,0 +1,8 @@
+rootProject.name = 'easyhan-api'
+include 'proto-public'
+include 'proto-manage'
+include 'grpc-manage-java'
+include 'grpc-manage-javalite'
+include 'grpc-public-javalite'
+include 'grpc-public-java'
+

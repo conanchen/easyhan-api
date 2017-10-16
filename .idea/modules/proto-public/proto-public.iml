@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":proto-public" external.linked.project.path="$MODULE_DIR$/../../../proto-public" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="com.github.conanchen.hiask-api-sexyimage" external.system.module.version="0.1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../proto-public">
+      <excludeFolder url="file://$MODULE_DIR$/../../../proto-public/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../proto-public/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../proto-public/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
