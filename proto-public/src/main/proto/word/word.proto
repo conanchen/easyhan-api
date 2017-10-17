@@ -47,12 +47,14 @@ message VisitResponse {
 
 
 message ListRequest {
-    int64 lastUpdated = 1;
+    common.HanziLevel level = 1;
+    int64 lastUpdated = 2;
 }
 
 message ListResponse {
     string word = 1;
     common.HanziLevel level = 2;
     int64 lastUpdated = 3;
+    int32 vistCount = 4;
 }
 
