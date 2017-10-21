@@ -31,11 +31,13 @@ service MyWord {
     // streamed rather than returned at once (e.g. in a response message with a
     // repeated field), as the lastUpsertd maybe an very old time and contain a
     // huge number of hanzis.
-    rpc List (ListRequest) returns (stream ListResponse) {
+    rpc List (ListRequest) returns (stream MyWordResponse) {
     }
 
+    rpc Get (GetRequest) returns (MyWordResponse) {
+    }
 
-    rpc Add (AddRequest) returns (AddResponse) {
+    rpc Upsert (UpsertRequest) returns (UpsertResponse) {
     }
 
     rpc Delete (DeleteRequest) returns (DeleteResponse) {
@@ -47,18 +49,24 @@ message ListRequest {
     int64 lastUpdated = 1;
 }
 
-message ListResponse {
+message MyWordResponse {
     string word = 1;
-    int64 lastUpdated = 2;
+    int32 memIdx = 2;
+    int64 lastUpdated = 3;
 }
 
 
-message AddRequest {
+message GetRequest {
     string word = 1;
 }
 
-message AddResponse {
+message UpsertRequest {
+    string word = 1;
+}
+
+message UpsertResponse {
     common.Error error = 1;
+    int32 memIdx = 2;
 }
 
 message DeleteRequest {
