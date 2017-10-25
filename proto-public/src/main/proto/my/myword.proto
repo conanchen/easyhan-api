@@ -42,8 +42,25 @@ service MyWord {
 
     rpc Delete (DeleteRequest) returns (DeleteResponse) {
     }
+
+    rpc Stats (StatsRequest) returns (stream StatsResponse){}
 }
 
+
+message StatsRequest {
+}
+
+message StatsResponse {
+    common.HanziLevel level=1;
+    int32 numMemory7 = 2;
+    int32 numMemory6 = 3;
+    int32 numMemory5 = 4;
+    int32 numMemory4 = 5;
+    int32 numMemory3 = 6;
+    int32 numMemory2 = 7;
+    int32 numMemory1 = 8;
+    int32 numMemory0 = 9;
+}
 
 message ListRequest {
     int64 lastUpdated = 1;

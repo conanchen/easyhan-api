@@ -1,7 +1,10 @@
+plugins{
+    id "com.jfrog.bintray" version "1.7.3"
+}
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'com.google.protobuf'
-
+apply plugin: 'maven-publish'
 
 dependencies {
     protobuf project(':proto-manage')
@@ -54,6 +57,31 @@ idea {
     }
 }
 
+bintray{
+    user = 'conanchen'
+    key = 'ab521e38d55afe5581f169c2139136983b5ef20e'
+    publications = ['MyPublication']
+    pkg{
+        repo = 'easyhan'
+        name = 'grpc-manage-javalite'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/conanchen/easyhan-api.git'
+        version {
+            name = 'v1.0.0-developement'
+        }
+    }
+}
+
+publishing{
+    publications{
+        MyPublication(MavenPublication){
+            from components.java
+            groupId 'com.github.conanchen.easyhan-api'
+            artifactId 'grpc-manage-javalite'
+            version 'v1.0.0-developement'
+        }
+    }
+}
 project.logger.lifecycle("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 project.logger.lifecycle("~~~~~~~~~~~~~~GRPC-MANAGE-JAVALITE BUILD DONE!~~~~~~~~~~~~~~~");
 project.logger.lifecycle("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
