@@ -54,10 +54,12 @@ message ListRequest {
 message WordResponse {
     string word = 1;
     int32 idx = 2;
-    string pinyin = 3;
-    common.HanziLevel level = 4;
-    int64 created = 5;
-    int64 lastUpdated = 6;
-    int32 vistCount = 7;
+    string pinyin1 = 3;
+    string pinyin2 = 4;
+    string strokes = 5;
+    common.HanziLevel level = 6;
+    int64 created = 7;
+    int64 lastUpdated = 8;
+    int32 vistCount = 9;
 }
 
