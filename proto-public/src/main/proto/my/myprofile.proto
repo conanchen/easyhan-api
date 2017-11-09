@@ -38,6 +38,7 @@ message MyProfileResponse {
     string nickName = 1;
     string userNo = 2;
     string avartarUrl = 3;
+    int64 lastUpdated = 4;
 }
 
 
