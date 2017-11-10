@@ -79,6 +79,7 @@ message GetRequest {
 
 message UpsertRequest {
     string word = 1;
+    int32 progressStep=2;
 }
 
 message UpsertResponse {
