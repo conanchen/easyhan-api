@@ -35,6 +35,9 @@ service Word {
     }
     rpc Visit (VisitRequest) returns (VisitResponse) {
     }
+
+    rpc Update (UpdateRequest) returns (common.StatusResponse) {
+    }
 }
 
 message VisitRequest {
@@ -63,3 +66,8 @@ message WordResponse {
     int32 vistCount = 9;
 }
 
+
+message UpdateRequest {
+    string word = 1;
+    string html = 2;
+}
