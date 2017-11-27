@@ -56,16 +56,34 @@ message ListRequest {
 
 message WordResponse {
     string word = 1;
-    int32 idx = 2;
-    string pinyin1 = 3;
-    string pinyin2 = 4;
-    string strokes = 5;
-    common.HanziLevel level = 6;
-    int64 created = 7;
-    int64 lastUpdated = 8;
-    int32 vistCount = 9;
+    common.HanziLevel level = 2;
+    int32 levelIdx = 3;
+    int64 created = 4;
+    int64 lastUpdated = 5;
+    int32 vistCount = 6;
+
+    repeated Pinyin pinyins = 10;
+    string radical = 11;
+    string wuxing = 12;
+    string traditional = 13;
+    string wubi = 14;
+    repeated string strokes = 15;
+    int32 strokes_count = 16;
+    string basemean = 17;
+    string detailmean = 18;
+    repeated string terms = 19;
+    repeated string riddles = 20;
+    string fanyi = 21;
+    string bishun = 22;
+
+
 }
 
+
+message Pinyin {
+    string pinyin = 1;
+    string mp3 = 2;
+}
 
 message UpdateRequest {
     string word = 1;
