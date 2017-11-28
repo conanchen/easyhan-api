@@ -21,6 +21,7 @@ option java_outer_classname = "WordProto";
 option objc_class_prefix = "MDT";
 
 import "common/common.proto";
+import "google/protobuf/descriptor.proto";
 
 // The word service definition.
 service Word {
@@ -88,4 +89,13 @@ message Pinyin {
 message UpdateRequest {
     string word = 1;
     string html = 2;
+}
+
+
+extend google.protobuf.MessageOptions {
+    string my_option = 51234;
+}
+
+message MyMessage {
+    option (my_option) = "Hello world!";
 }
