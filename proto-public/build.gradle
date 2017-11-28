@@ -4,6 +4,7 @@ apply plugin: 'com.google.protobuf'
 compileJava.enabled = false
 
 dependencies {
+    compile "com.google.protobuf:protobuf-java:$PROTOC_VERSION"
 }
 
 protobuf {

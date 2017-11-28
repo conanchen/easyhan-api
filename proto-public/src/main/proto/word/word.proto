@@ -20,8 +20,8 @@ option java_package = "org.easyhan.word.grpc";
 option java_outer_classname = "WordProto";
 option objc_class_prefix = "MDT";
 
-import "common/common.proto";
 import "google/protobuf/descriptor.proto";
+import "common/common.proto";
 
 // The word service definition.
 service Word {
