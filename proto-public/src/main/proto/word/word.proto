@@ -94,8 +94,14 @@ message UpdateRequest {
 
 extend google.protobuf.MessageOptions {
     string my_option = 51234;
+    string hanzi_level1 = 50001;
+    string hanzi_level2 = 50002;
+    string hanzi_level3 = 50003;
 }
 
 message MyMessage {
     option (my_option) = "Hello world!";
+    option (hanzi_level1) = "hanzi_level1 Hello world!";
+    option (hanzi_level2) = "hanzi_level2 Hello world!";
+    option (hanzi_level3) = "hanzi_level3 Hello world!";
 }
