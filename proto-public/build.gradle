@@ -1,4 +1,4 @@
-apply plugin: 'java'
+apply plugin: 'idea'
 apply plugin: 'com.google.protobuf'
 
 //compileJava.enabled = false
