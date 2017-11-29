@@ -3,6 +3,7 @@ apply plugin: 'com.google.protobuf'
 
 dependencies {
     protobuf project(':proto-manage')
+    compile project(':proto-manage')
     compile "io.grpc:grpc-core:$GRPC_VERSION"
     compile "io.grpc:grpc-protobuf:$GRPC_VERSION"
     compile "io.grpc:grpc-stub:$GRPC_VERSION"
