@@ -5,4 +5,5 @@ include 'grpc-manage-java'
 include 'grpc-manage-javalite'
 include 'grpc-public-javalite'
 include 'grpc-public-java'
+include 'constants'
 

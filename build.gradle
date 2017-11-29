@@ -62,11 +62,6 @@ subprojects {
     }
 }
 
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
-
 project.logger.lifecycle("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 project.logger.lifecycle("~~~~~~~~~~~~~~~~~SEXYIMAGE ROOT BUILD DONE!~~~~~~~~~~~~~~~~~~");
 project.logger.lifecycle("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
