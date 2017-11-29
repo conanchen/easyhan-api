@@ -5,7 +5,6 @@ apply plugin: 'com.google.protobuf'
 
 
 dependencies {
-    compile project(':proto-public')
     protobuf project(':proto-public')
 }
 

@@ -2,6 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'com.google.protobuf'
 
 dependencies {
+    compile project(':constants')
     protobuf project(':proto-public')
     compile "io.grpc:grpc-core:$GRPC_VERSION"
     compile "io.grpc:grpc-protobuf:$GRPC_VERSION"
