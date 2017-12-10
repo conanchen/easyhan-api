@@ -69,13 +69,15 @@ message WordResponse {
     string traditional = 13;
     string wubi = 14;
     repeated string strokes = 15;
-    int32 strokes_count = 16;
-    string basemean = 17;
-    string detailmean = 18;
-    repeated string terms = 19;
-    repeated string riddles = 20;
-    string fanyi = 21;
-    string bishun = 22;
+    repeated string strokenames = 16;
+    int32 strokes_count = 17;
+    string basemean = 18;
+    string detailmean = 19;
+    repeated string terms = 20;
+    repeated string riddles = 21;
+    string fanyi = 22;
+    string bishun = 23;
+    string defined = 24;
 
 
 }
