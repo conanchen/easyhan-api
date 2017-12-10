@@ -77,7 +77,7 @@ message WordResponse {
     repeated string riddles = 21;
     string fanyi = 22;
     string bishun = 23;
-    string defined = 24;
+    bool defined = 24;
 
 
 }
