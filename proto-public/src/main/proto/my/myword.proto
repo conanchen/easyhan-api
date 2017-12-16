@@ -70,6 +70,7 @@ message MyWordResponse {
     string word = 1;
     int32 memIdx = 2;
     int64 lastUpdated = 3;
+    string brokenStrokesMessage = 4;
 }
 
 
