@@ -80,6 +80,8 @@ message GetRequest {
 message UpsertRequest {
     string word = 1;
     int32 progressStep=2;
+    bool updateBrokenStrokesMessage = 3;
+    string brokenStrokesMessage = 4;
 }
 
 message UpsertResponse {
